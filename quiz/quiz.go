@@ -60,7 +60,7 @@ func ask(s chan score, questions []question) {
 func main() {
 	s := make(chan score)
 	qs := questions()
-	timer := time.After(10 * time.Second)
+	timer := time.After(5 * time.Second)
 	go ask(s, qs)
 	select {
 	case <-timer:
